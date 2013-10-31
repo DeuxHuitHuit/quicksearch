@@ -2,6 +2,9 @@
 
 A [jQuery][jquery_site] based plug-in for filtering large data sets with user input
 
+This is an improved fork of the original work of riklomas <https://github.com/riklomas/quicksearch>.
+This plugin is now maintained by [@DeuxHuitHuit](http://deuxhuithuit.com)
+
 ## Examples
 
 * <http://www.lomalogue.com/jquery/quicksearch/>
@@ -147,6 +150,8 @@ Under the same licenses as the jQuery library itself: <http://docs.jquery.com/Li
 jQuery quicksearch is made by [Rik Lomas][rik_site] at [Lomalogue][lomalogue_site]
 
 Thanks to [Seth F.][thelizardreborn] for fixes and [Krzysiek Goj][goj] for the  testQuery and prepareQuery option updates
+
+Now licensed under the MIT License: <http://deuxhuithuit.mit-license.org>
 
 [jquery_site]: http://www.jquery.com
 [rik_site]: http://www.riklomas.co.uk
