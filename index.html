@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Quicksearch : A jQuery plugin for searching through tables, lists, etc quickly" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Quicksearch</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/DeuxHuitHuit/quicksearch">View on GitHub</a>
+
+          <h1 id="project_title">Quicksearch</h1>
+          <h2 id="project_tagline">A jQuery plugin for searching through tables, lists, etc quickly</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/DeuxHuitHuit/quicksearch/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/DeuxHuitHuit/quicksearch/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="jquery-quicksearch-plug-in" class="anchor" href="#jquery-quicksearch-plug-in"><span class="octicon octicon-link"></span></a>jQuery quicksearch plug-in</h1>
+
+<p>A <a href="http://www.jquery.com">jQuery</a> based plug-in for filtering large data sets with user input</p>
+
+<p>This is an improved fork of the original work of riklomas <a href="https://github.com/riklomas/quicksearch">https://github.com/riklomas/quicksearch</a>.
+This plugin is now maintained by <a href="http://deuxhuithuit.com">@DeuxHuitHuit</a></p>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<ul>
+<li><a href="http://www.lomalogue.com/jquery/quicksearch/">http://www.lomalogue.com/jquery/quicksearch/</a></li>
+<li><a href="http://www.lomalogue.com/jquery/quicksearch/super_table.html">http://www.lomalogue.com/jquery/quicksearch/super_table.html</a></li>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Note that the usage has changed in the latest version of quicksearch, the code is <em>not</em> backwards compatible,
+the form and input are not build by the script any more.</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="nx">input_selector</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="nx">elements_to_search</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</pre></div>
+
+<h4>
+<a name="example-on-table-rows" class="anchor" href="#example-on-table-rows"><span class="octicon octicon-link"></span></a>Example on table rows</h4>
+
+<div class="highlight highlight-html"><pre>/* Example form */
+<span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+/* Example table */
+<span class="nt">&lt;table&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Test cell<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Another test cell<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"jquery.quicksearch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h4>
+<a name="example-on-the-th-elements-on-a-table-row" class="anchor" href="#example-on-the-th-elements-on-a-table-row"><span class="octicon octicon-link"></span></a>Example on the <code>&lt;th&gt;</code> elements on a table row</h4>
+
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">'th'</span>
+<span class="p">});</span>
+</pre></div>
+
+<h4>
+<a name="example-of-how-to-use-with-js" class="anchor" href="#example-of-how-to-use-with-js"><span class="octicon octicon-link"></span></a>Example of how to use with JS</h4>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'input#id_search_list'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'ul#list_example li'</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'ul#list_example'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;li&gt;Loaded with Ajax&lt;/li&gt;'</span><span class="p">);</span>
+<span class="nx">qs</span><span class="p">.</span><span class="nx">cache</span><span class="p">();</span>
+</pre></div>
+
+<h4>
+<a name="example-of-how-to-use-with-ajax" class="anchor" href="#example-of-how-to-use-with-ajax"><span class="octicon octicon-link"></span></a>Example of how to use with Ajax</h4>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="s1">'type'</span><span class="o">:</span> <span class="s1">'GET'</span><span class="p">,</span>
+    <span class="s1">'url'</span><span class="o">:</span> <span class="s1">'index.html'</span><span class="p">,</span>
+    <span class="s1">'success'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+        <span class="nx">qs</span><span class="p">.</span><span class="nx">cache</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<ul>
+<li>  <strong>delay</strong>
+Delay of trigger in milliseconds</li>
+<li>  <strong>selector</strong>
+A query selector on sibling elements to test</li>
+<li>  <strong>stripeRows</strong>
+An array of class names to go on each row</li>
+<li>  <strong>loader</strong>
+A query selector to find a loading element</li>
+<li>  <strong>noResults</strong>
+A query selector to show if there's no results for the search</li>
+<li>  <strong>bind</strong>
+Event that the trigger is tied to</li>
+<li>  <strong>onBefore</strong>
+Function to call before trigger is called</li>
+<li>  <strong>onAfter</strong>
+Function to call after trigger is called</li>
+<li>  <strong>show</strong>
+Function that will add styles to matched elements</li>
+<li>  <strong>hide</strong>
+Function that will add styles to unmatched elements</li>
+<li>  <strong>prepareQuery</strong>
+Function that transforms text from input_selector into query used by 'testQuery' function</li>
+<li>  <strong>testQuery</strong>
+Function that tells if a given item should be hidden
+It takes 3 arguments:
+
+<ul>
+<li>query prepared by 'prepareQuery'</li>
+<li>stripped text from 'selector'</li>
+<li>element to be potentially hidden</li>
+</ul>
+</li>
+</ul><p>For example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s1">'delay'</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s1">'selector'</span><span class="o">:</span> <span class="s1">'th'</span><span class="p">,</span>
+    <span class="s1">'stripeRows'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'odd'</span><span class="p">,</span> <span class="s1">'even'</span><span class="p">],</span>
+    <span class="s1">'loader'</span><span class="o">:</span> <span class="s1">'span.loading'</span><span class="p">,</span>
+    <span class="s1">'noResults'</span><span class="o">:</span> <span class="s1">'tr#noresults'</span><span class="p">,</span>
+    <span class="s1">'bind'</span><span class="o">:</span> <span class="s1">'keyup keydown'</span><span class="p">,</span>
+    <span class="s1">'onBefore'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on before'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="s1">'onAfter'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on after'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="s1">'show'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="s1">'hide'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="s1">'prepareQuery'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="s1">'testQuery'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">txt</span><span class="p">,</span> <span class="nx">_row</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">query</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">txt</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="help-make-quicksearch-better" class="anchor" href="#help-make-quicksearch-better"><span class="octicon octicon-link"></span></a>Help make quicksearch better!</h2>
+
+<p>If you have a bug fix, the best way to help would be to:</p>
+
+<ul>
+<li>Fork the project by clicking "Fork this project" at the top of this page</li>
+<li>Clone your version of quicksearch from your Github account to your computer</li>
+<li>Fix and commit the bugs, then push your version to your Github account</li>
+<li>Click "pull request" at the top of my Github page</li>
+</ul><p>I can't promise to answer every question about quicksearch, 
+but please do <a href="http://github.com/riklomas/quicksearch/issues">report bugs here</a> or <a href="http://github.com/inbox/new/riklomas">send me a message on Github</a>. </p>
+
+<p>You can <a href="http://github.com/riklomas/quicksearch/toggle_watch">watch quicksearch</a> for updates or <a href="http://github.com/users/follow?target=riklomas">follow me on Github</a> 
+and <a href="http://twitter.com/riklomas">on Twitter</a>.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Under the same licenses as the jQuery library itself: <a href="http://docs.jquery.com/License">http://docs.jquery.com/License</a></p>
+
+<h2>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>jQuery quicksearch is made by <a href="http://www.riklomas.co.uk">Rik Lomas</a> at <a href="http://www.lomalogue.com">Lomalogue</a></p>
+
+<p>Thanks to <a href="http://github.com/thelizardreborn">Seth F.</a> for fixes and <a href="http://github.com/goj">Krzysiek Goj</a> for the  testQuery and prepareQuery option updates</p>
+
+<p>Now licensed under the MIT License: <a href="http://deuxhuithuit.mit-license.org">http://deuxhuithuit.mit-license.org</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Quicksearch maintained by <a href="https://github.com/DeuxHuitHuit">DeuxHuitHuit</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
