@@ -321,4 +321,4 @@
 		
 	};
 
-}(jQuery, this, document));
+}(window.jQuery, this, document));
