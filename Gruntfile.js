@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	var gruntfile = 'Gruntfile.js';
 	var sources = ['src/<%= pkg.name %>.js'];
 	
-	md.filter('grunt-*').forEach(grunt.loadNpmTasks);
+	md.filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 	
 	// Project configuration.
 	grunt.initConfig({
