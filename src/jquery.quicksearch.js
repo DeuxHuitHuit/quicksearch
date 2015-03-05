@@ -298,8 +298,6 @@
 				}, options.delay);
 			}
 			
-			
-			
 			return this;
 		};
 		
