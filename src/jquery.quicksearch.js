@@ -261,12 +261,19 @@
 			
 			jq_results = $(target).not(options.noResults);
 			
-			var t = (typeof options.selector === "string") ? jq_results.find(options.selector) : jq_results;
-			
-			cache = t.map(function () {
-				var temp = self.strip_html(this.innerHTML);
-				return options.removeDiacritics ? self.removeDiacritics(temp) : temp;
-			});
+			if (typeof options.selector === "string") {
+				cache = jq_results.map(function() {
+					return $(this).find(options.selector).map(function() {
+						var temp = self.strip_html(this.innerHTML);
+						return options.removeDiacritics ? self.removeDiacritics(temp) : temp;
+					}).get().join(" ");
+				});
+			} else {
+				cache = jq_results.map(function () {
+					var temp = self.strip_html(this.innerHTML);
+					return options.removeDiacritics ? self.removeDiacritics(temp) : temp;
+				});
+			}
 			
 			rowcache = jq_results.map(function () {
 				return this;
