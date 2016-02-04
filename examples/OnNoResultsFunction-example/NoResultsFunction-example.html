@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery quicksearch - OnNoResultsFunction example </title>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="jquery-2.2.0.js"></script>
+
+	<!-- Quicksearch -->
+	<script type="text/javascript" src="jquery.quicksearch.js"></script>
+
+	<!-- my script.js -->
+	<script type="text/javascript" src="myscript.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+
+</head>
+<body class="container">
+		
+		<h2>jQuery quicksearch - OnNoResultsFunction example </h2><hr>
+
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<input id="input_search" type="text" class="form-control" placeholder="write something...">					
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8">
+				
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					Table
+				</div>
+
+				<table id="target_table" class="table table-condensed">
+					<thead> 
+						<tr> 
+							<th>#</th> 
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Username</th>
+						</tr> 
+					</thead>
+
+					<tbody> 
+						<tr> 
+							<th scope="row">1</th>
+							<td>Mark</td> 
+							<td>Otto</td> 
+							<td>@mdo</td> 
+						</tr> 
+
+						<tr> 
+							<th scope="row">2</th>
+							<td>Jacob</td> 
+							<td>Thornton</td> 
+							<td>@fat</td> 
+						</tr> 
+						
+						<tr> 
+							<th scope="row">3</th> 
+							<td colspan="2">Larry the Bird</td> 
+							<td>@twitter</td> 
+						</tr> 
+					</tbody> 
+				</table>
+
+			</div>	
+
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-8">
+				
+				<p>The above example uses following code:</p>
+				<code>
+				The settings
+					<pre> 
+$('input#input_search').quicksearch(
+	'table#target_table tbody tr',
+	 {'enableOnNoResultsFunction': true, 'onNoResultsFound': exampleFunction}
+);
+					</pre>
+				The example function parameter
+					<pre>
+exampleFunction = function(){
+	alert("This function is called when there is no results and you enabled the 'OnNoResultsFunction'.");
+}
+					</pre>
+				</code>
+			</div>
+		</div>
+	
+
+		<section>
+			<address>
+				  <strong>Micael Mota</strong><br>
+				  <a href="http://www.facebook.com/micaelomota">facebook/micaelomota</a><br>
+				  <a href="mailto:#">micaelomota@hotmail.com</a>
+				</address>
+		</section>
+
+</body>
+</html>
