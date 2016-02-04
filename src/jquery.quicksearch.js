@@ -23,10 +23,7 @@
 			onBefore: $.noop,
 			onAfter: $.noop,
 			onValTooSmall: $.noop,
-			enableOnNoResultsFunction: false,
-			onNoResultsFound: function(){
-				return;
-			},
+			onNoResultsFound: null,
 			show: function () {
 				$(this).show();
 			},
@@ -187,7 +184,7 @@
 			}
 			
 			if (noresults) {
-				if(options.enableOnNoResultsFunction){
+				if(options.onNoResultsFound !== null){
 					options.onNoResultsFound();
 				}else{
 					this.results(false);
