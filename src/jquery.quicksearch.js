@@ -23,7 +23,7 @@
 			onBefore: $.noop,
 			onAfter: $.noop,
 			onValTooSmall: $.noop,
-			onNoResultsFound: null,
+			onNoResultFound: null,
 			show: function () {
 				$(this).show();
 			},

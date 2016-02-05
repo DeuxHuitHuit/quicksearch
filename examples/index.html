@@ -657,7 +657,7 @@ $('input#add_to_list').click(function () {
 
 
 
-<h3>OnNoResultsFound function example</h3>
+<h3>OnNoResultFound function example</h3>
 		
 		<form action="#">
 			<fieldset>
@@ -854,12 +854,12 @@ $('input#add_to_list').click(function () {
 				<p>Table example uses following code:</p>
 <code><pre>
 exampleFunction = function(){
-	alert("This function is called when there is no results and you set the 'OnNoResultsFound' function.");
+	alert("This function is called when there is no results and you set the 'OnNoResultFound' function.");
 }
 
 $('input#id_noResultFunction').quicksearch(
 	'table#table_noResultFunction tbody tr',
-	{'onNoResultsFound': exampleFunction}
+	{'onNoResultFound': exampleFunction}
 );		
 </pre></code>
 
