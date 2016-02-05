@@ -140,14 +140,7 @@
 			return str;
 		};
 		
-		var timeout,
-			cache,
-			rowcache,
-			jq_results,
-			val = '', 
-			last_val = '', 
-			self = this, 
-
+		var timeout, cache,	rowcache, jq_results, val = '', last_val = '', self = this, 
 			options = $.extend({}, $.quicksearch.defaults, opt);
 			
 		// Assure selectors
@@ -184,8 +177,8 @@
 			}
 			
 			if (noresults) {
-				if(options.onNoResultsFound !== null){
-					options.onNoResultsFound();
+				if($.isFunction(options.onNoResultsFound)){
+					options.onNoResultsFound(this);
 				}else{
 					this.results(false);
 				}
