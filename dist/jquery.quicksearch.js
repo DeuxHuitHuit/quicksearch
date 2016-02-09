@@ -1,4 +1,4 @@
-/*! jQuery-QuickSearch - v2.1.0 - 2016-02-09
+/*! jQuery-QuickSearch - v2.2.0 - 2016-02-09
 * https://deuxhuithuit.github.io/quicksearch/
 * Copyright (c) 2016 Deux Huit Huit (https://deuxhuithuit.com/);
 * Licensed MIT http://deuxhuithuit.mit-license.org */
