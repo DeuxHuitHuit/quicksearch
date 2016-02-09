@@ -1,122 +1,110 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Quicksearch : A jQuery plugin for searching through tables, lists, etc quickly" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Quicksearch</title>
+    <meta charset="UTF-8">
+    <title>Quicksearch by DeuxHuitHuit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Quicksearch</h1>
+      <h2 class="project-tagline">A jQuery plugin for searching through tables, lists, etc quickly</h2>
+      <a href="https://github.com/DeuxHuitHuit/quicksearch" class="btn">View on GitHub</a>
+      <a href="https://github.com/DeuxHuitHuit/quicksearch/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/DeuxHuitHuit/quicksearch/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/DeuxHuitHuit/quicksearch">View on GitHub</a>
-
-          <h1 id="project_title">Quicksearch</h1>
-          <h2 id="project_tagline">A jQuery plugin for searching through tables, lists, etc quickly</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/DeuxHuitHuit/quicksearch/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/DeuxHuitHuit/quicksearch/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="jquery-quicksearch-plug-in" class="anchor" href="#jquery-quicksearch-plug-in"><span class="octicon octicon-link"></span></a>jQuery quicksearch plug-in</h1>
+    <section class="main-content">
+      <h1>
+<a id="jquery-quicksearch-plug-in" class="anchor" href="#jquery-quicksearch-plug-in" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jQuery quicksearch plug-in</h1>
 
 <p>A <a href="http://www.jquery.com">jQuery</a> based plug-in for filtering large data sets with user input</p>
 
 <p>This is an improved fork of the original work of riklomas <a href="https://github.com/riklomas/quicksearch">https://github.com/riklomas/quicksearch</a>.
-This plugin is now maintained by <a href="http://deuxhuithuit.com/">@DeuxHuitHuit</a></p>
+This plugin is now maintained by <a href="https://deuxhuithuit.com/">@DeuxHuitHuit</a></p>
 
 <h2>
-<a name="project-pages" class="anchor" href="#project-pages"><span class="octicon octicon-link"></span></a>Project pages</h2>
+<a id="project-pages" class="anchor" href="#project-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project pages</h2>
 
 <ul>
-<li><a href="http://deuxhuithuit.github.io/quicksearch/">http://deuxhuithuit.github.io/quicksearch/</a></li>
-<li><a href="http://plugins.jquery.com/jquery.quicksearch/">http://plugins.jquery.com/jquery.quicksearch/</a></li>
-</ul><h2>
-<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+<li><a href="https://deuxhuithuit.github.io/quicksearch/">https://deuxhuithuit.github.io/quicksearch/</a></li>
+<li><a href="https://www.npmjs.org/package/jquery.quicksearch/">https://www.npmjs.org/package/jquery.quicksearch/</a></li>
+<li><a href="https://plugins.jquery.com/jquery.quicksearch/">https://plugins.jquery.com/jquery.quicksearch/</a></li>
+</ul>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h2>
 
 <ul>
-<li><a href="http://deuxhuithuit.github.io/quicksearch/r/examples/">http://deuxhuithuit.github.io/quicksearch/r/examples/</a></li>
-<li><a href="http://deuxhuithuit.github.io/quicksearch/r/examples/super_table.html">http://deuxhuithuit.github.io/quicksearch/r/examples/super_table.html</a></li>
-</ul><h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<li><a href="https://deuxhuithuit.github.io/quicksearch/r/examples/">https://deuxhuithuit.github.io/quicksearch/r/examples/</a></li>
+<li><a href="https://deuxhuithuit.github.io/quicksearch/r/examples/super_table.html">https://deuxhuithuit.github.io/quicksearch/r/examples/super_table.html</a></li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Note that the usage has changed in the latest version of quicksearch, the code is <em>not</em> backwards compatible,
 the form and input are not build by the script any more.</p>
 
-<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="nx">input_selector</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="nx">elements_to_search</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(input_selector).<span class="pl-en">quicksearch</span>(elements_to_search, options);</pre></div>
 
 <h4>
-<a name="example-on-table-rows" class="anchor" href="#example-on-table-rows"><span class="octicon octicon-link"></span></a>Example on table rows</h4>
+<a id="example-on-table-rows" class="anchor" href="#example-on-table-rows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example on table rows</h4>
 
-<div class="highlight highlight-html"><pre>/* Example form */
-<span class="nt">&lt;form&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"search"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
+<div class="highlight highlight-text-html-basic"><pre>/* Example form */
+&lt;<span class="pl-ent">form</span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>search<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">form</span>&gt;
 
 /* Example table */
-<span class="nt">&lt;table&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>Test cell<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>Another test cell<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+&lt;<span class="pl-ent">table</span>&gt;
+    &lt;<span class="pl-ent">tbody</span>&gt;
+        &lt;<span class="pl-ent">tr</span>&gt;
+            &lt;<span class="pl-ent">td</span>&gt;Test cell&lt;/<span class="pl-ent">td</span>&gt;
+            &lt;<span class="pl-ent">td</span>&gt;Another test cell&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;/<span class="pl-ent">tr</span>&gt;
+    &lt;/<span class="pl-ent">tbody</span>&gt;
+&lt;/<span class="pl-ent">table</span>&gt;
 
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery.quicksearch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">);</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
-
-<h4>
-<a name="example-on-the-th-elements-on-a-table-row" class="anchor" href="#example-on-the-th-elements-on-a-table-row"><span class="octicon octicon-link"></span></a>Example on the <code>&lt;th&gt;</code> elements on a table row</h4>
-
-<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">selector</span><span class="o">:</span> <span class="s1">'th'</span>
-<span class="p">});</span>
-</pre></div>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.quicksearch.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>input#search<span class="pl-pds">'</span></span>).<span class="pl-en">quicksearch</span>(<span class="pl-s"><span class="pl-pds">'</span>table tbody tr<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h4>
-<a name="example-of-how-to-use-with-js" class="anchor" href="#example-of-how-to-use-with-js"><span class="octicon octicon-link"></span></a>Example of how to use with JS</h4>
+<a id="example-on-the-th-elements-on-a-table-row" class="anchor" href="#example-on-the-th-elements-on-a-table-row" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example on the <code>&lt;th&gt;</code> elements on a table row</h4>
 
-<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'input#id_search_list'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'ul#list_example li'</span><span class="p">);</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">'ul#list_example'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;li&gt;Loaded with Ajax&lt;/li&gt;'</span><span class="p">);</span>
-<span class="nx">qs</span><span class="p">.</span><span class="nx">cache</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>input#search<span class="pl-pds">'</span></span>).<span class="pl-en">quicksearch</span>(<span class="pl-s"><span class="pl-pds">'</span>table tbody tr<span class="pl-pds">'</span></span>, {
+    selector<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>th<span class="pl-pds">'</span></span>
+});</pre></div>
 
 <h4>
-<a name="example-of-how-to-use-with-ajax" class="anchor" href="#example-of-how-to-use-with-ajax"><span class="octicon octicon-link"></span></a>Example of how to use with Ajax</h4>
+<a id="example-of-how-to-use-with-js" class="anchor" href="#example-of-how-to-use-with-js" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example of how to use with JS</h4>
 
-<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">);</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
-    <span class="s1">'type'</span><span class="o">:</span> <span class="s1">'GET'</span><span class="p">,</span>
-    <span class="s1">'url'</span><span class="o">:</span> <span class="s1">'index.html'</span><span class="p">,</span>
-    <span class="s1">'success'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-        <span class="nx">qs</span><span class="p">.</span><span class="nx">cache</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> qs <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>input#id_search_list<span class="pl-pds">'</span></span>).<span class="pl-en">quicksearch</span>(<span class="pl-s"><span class="pl-pds">'</span>ul#list_example li<span class="pl-pds">'</span></span>);
+<span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>ul#list_example<span class="pl-pds">'</span></span>).<span class="pl-en">append</span>(<span class="pl-s"><span class="pl-pds">'</span>&lt;li&gt;Loaded with Ajax&lt;/li&gt;<span class="pl-pds">'</span></span>);
+<span class="pl-smi">qs</span>.<span class="pl-en">cache</span>();</pre></div>
+
+<h4>
+<a id="example-of-how-to-use-with-ajax" class="anchor" href="#example-of-how-to-use-with-ajax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example of how to use with Ajax</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> qs <span class="pl-k">=</span> <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>input#search<span class="pl-pds">'</span></span>).<span class="pl-en">quicksearch</span>(<span class="pl-s"><span class="pl-pds">'</span>table tbody tr<span class="pl-pds">'</span></span>);
+<span class="pl-smi">$</span>.<span class="pl-en">ajax</span>({
+    <span class="pl-s"><span class="pl-pds">'</span>type<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>GET<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>url<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>index.html<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">success</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>table tbody tr<span class="pl-pds">'</span></span>).<span class="pl-en">append</span>(data);
+        <span class="pl-smi">qs</span>.<span class="pl-en">cache</span>();
+    }
+});</pre></div>
 
 <h2>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
 
 <ul>
 <li>  <strong>delay</strong>
@@ -143,6 +131,8 @@ Function to call before trigger is called</li>
 Function to call after trigger is called</li>
 <li>  <strong>onValTooSmall</strong>
 Function to call when the value does not exceeds the <code>minValLength</code> option.</li>
+<li>  <strong>onNoResultFound</strong>
+Function to call when no results are found. The normal behavior (show the no result panel) is canceled when you specify this parameter. You get the quicksearch instance in parameter so you can manually call the no result behavior.</li>
 <li>  <strong>show</strong>
 Function that will add styles to matched elements</li>
 <li>  <strong>hide</strong>
@@ -159,83 +149,87 @@ It takes 3 arguments:
 <li>element to be potentially hidden</li>
 </ul>
 </li>
-</ul><h3>
-<a name="callbacks" class="anchor" href="#callbacks"><span class="octicon octicon-link"></span></a>Callbacks</h3>
+</ul>
+
+<h3>
+<a id="callbacks" class="anchor" href="#callbacks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Callbacks</h3>
 
 <p>Functions are always <code>call</code>'d or <code>apply</code>'d, so except <code>this</code> to be the plugin object.</p>
 
 <p>For example:</p>
 
-<div class="highlight highlight-js"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'input#search'</span><span class="p">).</span><span class="nx">quicksearch</span><span class="p">(</span><span class="s1">'table tbody tr'</span><span class="p">,</span> <span class="p">{</span>
-    <span class="s1">'delay'</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
-    <span class="s1">'selector'</span><span class="o">:</span> <span class="s1">'th'</span><span class="p">,</span>
-    <span class="s1">'stripeRows'</span><span class="o">:</span> <span class="p">[</span><span class="s1">'odd'</span><span class="p">,</span> <span class="s1">'even'</span><span class="p">],</span>
-    <span class="s1">'loader'</span><span class="o">:</span> <span class="s1">'span.loading'</span><span class="p">,</span>
-    <span class="s1">'noResults'</span><span class="o">:</span> <span class="s1">'tr#noresults'</span><span class="p">,</span>
-    <span class="s1">'bind'</span><span class="o">:</span> <span class="s1">'keyup keydown'</span><span class="p">,</span>
-    <span class="s1">'minValLength'</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s1">'removeDiacritics'</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s1">'onBefore'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on before'</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="s1">'onAfter'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on after'</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="s1">'onValTooSmall'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'value '</span> <span class="o">+</span> <span class="nx">val</span> <span class="o">+</span> <span class="s1">' is too small'</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="s1">'show'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="s1">'hide'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="s1">'prepareQuery'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="s1">'testQuery'</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">txt</span><span class="p">,</span> <span class="nx">_row</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">query</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">txt</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>input#search<span class="pl-pds">'</span></span>).<span class="pl-en">quicksearch</span>(<span class="pl-s"><span class="pl-pds">'</span>table tbody tr<span class="pl-pds">'</span></span>, {
+    <span class="pl-s"><span class="pl-pds">'</span>delay<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">100</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>selector<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>th<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>stripeRows<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>odd<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>even<span class="pl-pds">'</span></span>],
+    <span class="pl-s"><span class="pl-pds">'</span>loader<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>span.loading<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>noResults<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>tr#noresults<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>bind<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>keyup keydown<span class="pl-pds">'</span></span>,
+    <span class="pl-s"><span class="pl-pds">'</span>minValLength<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">2</span>,
+    <span class="pl-s"><span class="pl-pds">'</span>removeDiacritics<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-c1">true</span>,
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">onBefore</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>on before<span class="pl-pds">'</span></span>);
+    },
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">onAfter</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>on after<span class="pl-pds">'</span></span>);
+    },
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">onValTooSmall</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">val</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>value <span class="pl-pds">'</span></span> <span class="pl-k">+</span> val <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span> is too small<span class="pl-pds">'</span></span>);
+    },
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">show</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
+        <span class="pl-en">$</span>(<span class="pl-v">this</span>).<span class="pl-en">addClass</span>(<span class="pl-s"><span class="pl-pds">'</span>show<span class="pl-pds">'</span></span>);
+    },
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">hide</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
+        <span class="pl-en">$</span>(<span class="pl-v">this</span>).<span class="pl-en">removeClass</span>(<span class="pl-s"><span class="pl-pds">'</span>show<span class="pl-pds">'</span></span>);
+    }
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">prepareQuery</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">val</span>) {
+        <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">RegExp</span>(val, <span class="pl-s"><span class="pl-pds">"</span>i<span class="pl-pds">"</span></span>);
+    },
+    <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">testQuery</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">query</span>, <span class="pl-smi">txt</span>, <span class="pl-smi">_row</span>) {
+        <span class="pl-k">return</span> <span class="pl-smi">query</span>.<span class="pl-c1">test</span>(txt);
+    }
+});</pre></div>
 
 <h2>
-<a name="help-make-quicksearch-better" class="anchor" href="#help-make-quicksearch-better"><span class="octicon octicon-link"></span></a>Help make quicksearch better!</h2>
+<a id="help-make-quicksearch-better" class="anchor" href="#help-make-quicksearch-better" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help make quicksearch better!</h2>
 
 <p>If you have a bug fix, the best way to help would be to:</p>
 
 <ul>
 <li>Fork the project by clicking "Fork this project" at the top of this page</li>
 <li>Clone your version of quicksearch from your Github account to your computer</li>
+<li>Checkout the <code>dev</code> branch</li>
 <li>Fix and commit the bugs, then push your version to your Github account</li>
 <li>Click "pull request" at the top of my Github page</li>
-</ul><p>I can't promise to answer every question about quicksearch, 
-but please do <a href="http://github.com/deuxhuithuit/quicksearch/issues">report bugs here</a>.</p>
+<li>Please create the "Pull Request" to push in the <code>branch</code>
+</li>
+</ul>
+
+<p>I can't promise to answer every question about quicksearch, 
+but please do <a href="https://github.com/deuxhuithuit/quicksearch/issues">report bugs here</a>.</p>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>Now licensed under the MIT License: <a href="http://deuxhuithuit.mit-license.org">http://deuxhuithuit.mit-license.org</a></p>
 
 <h2>
-<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Credits</h2>
 
 <p>jQuery quicksearch was made by <a href="http://www.riklomas.co.uk">Rik Lomas</a> at <a href="http://www.lomalogue.com">Lomalogue</a>.
-It is now maintain by <a href="http://deuxhuithuit.com/">Deux Huit Huit</a></p>
+It is now maintain by <a href="https://deuxhuithuit.com/">Deux Huit Huit</a></p>
 
-<p>Thanks to <a href="http://github.com/thelizardreborn">Seth F.</a> for fixes and <a href="http://github.com/goj">Krzysiek Goj</a> for the  testQuery and prepareQuery option updates</p>
-      </section>
-    </div>
+<p>Thanks to <a href="https://github.com/thelizardreborn">Seth F.</a> for fixes and <a href="https://github.com/goj">Krzysiek Goj</a> for the testQuery and prepareQuery option updates</p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Quicksearch maintained by <a href="https://github.com/DeuxHuitHuit">DeuxHuitHuit</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/DeuxHuitHuit/quicksearch">Quicksearch</a> is maintained by <a href="https://github.com/DeuxHuitHuit">DeuxHuitHuit</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-              <script type="text/javascript">
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -245,7 +239,6 @@ It is now maintain by <a href="http://deuxhuithuit.com/">Deux Huit Huit</a></p>
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
