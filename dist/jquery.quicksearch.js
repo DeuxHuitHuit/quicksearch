@@ -1,6 +1,6 @@
-/*! jQuery-QuickSearch - v2.0.5 - 2015-03-05
+/*! jQuery-QuickSearch - v2.1.0 - 2016-02-09
 * http://deuxhuithuit.github.io/quicksearch/
-* Copyright (c) 2015 Deux Huit Huit (https://deuxhuithuit.com/);
+* Copyright (c) 2016 Deux Huit Huit (https://deuxhuithuit.com/);
 * Licensed MIT http://deuxhuithuit.mit-license.org */
 /*! jQuery-QuickSearch - v2.0.2 - 2013-11-15
 * Copyright (c) 2013 Deux Huit Huit (http://deuxhuithuit.com/);
@@ -22,11 +22,13 @@
 			noResults: '',
 			matchedResultsCount: 0,
 			bind: 'keyup search input',
+			resetBind: 'reset',
 			removeDiacritics: false,
 			minValLength: 0,
 			onBefore: $.noop,
 			onAfter: $.noop,
 			onValTooSmall: $.noop,
+			onNoResultFound: null,
 			show: function () {
 				$(this).show();
 			},
@@ -143,8 +145,7 @@
 			return str;
 		};
 		
-		var timeout, cache, rowcache, jq_results, val = '', last_val = '', 
-			self = this, 
+		var timeout, cache,	rowcache, jq_results, val = '', last_val = '', self = this, 
 			options = $.extend({}, $.quicksearch.defaults, opt);
 			
 		// Assure selectors
@@ -181,7 +182,12 @@
 			}
 			
 			if (noresults) {
-				this.results(false);
+				if($.isFunction(options.onNoResultsFound)){
+					options.onNoResultsFound(this);
+				}else{
+					this.results(false);
+				}
+				
 			} else {
 				this.results(true);
 				this.stripe();
@@ -265,12 +271,19 @@
 			
 			jq_results = $(target).not(options.noResults);
 			
-			var t = (typeof options.selector === "string") ? jq_results.find(options.selector) : jq_results;
-			
-			cache = t.map(function () {
-				var temp = self.strip_html(this.innerHTML);
-				return options.removeDiacritics ? self.removeDiacritics(temp) : temp;
-			});
+			if (typeof options.selector === "string") {
+				cache = jq_results.map(function() {
+					return $(this).find(options.selector).map(function() {
+						var temp = self.strip_html(this.innerHTML);
+						return options.removeDiacritics ? self.removeDiacritics(temp) : temp;
+					}).get().join(" ");
+				});
+			} else {
+				cache = jq_results.map(function () {
+					var temp = self.strip_html(this.innerHTML);
+					return options.removeDiacritics ? self.removeDiacritics(temp) : temp;
+				});
+			}
 			
 			rowcache = jq_results.map(function () {
 				return this;
