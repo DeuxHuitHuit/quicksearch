@@ -9,7 +9,7 @@ This plugin is now maintained by [@DeuxHuitHuit][288]
 
 * <https://deuxhuithuit.github.io/quicksearch/>
 * <https://www.npmjs.org/package/jquery.quicksearch/>
-* <http://plugins.jquery.com/jquery.quicksearch/>
+* <https://plugins.jquery.com/jquery.quicksearch/>
 
 ## Examples
 
