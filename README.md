@@ -183,4 +183,4 @@ Thanks to [Seth F.][thelizardreborn] for fixes and [Krzysiek Goj][goj] for the t
 [issues]: https://github.com/deuxhuithuit/quicksearch/issues
 [thelizardreborn]: https://github.com/thelizardreborn
 [goj]: https://github.com/goj
-[288]: http://deuxhuithuit.com/
+[288]: https://deuxhuithuit.com/
