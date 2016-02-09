@@ -177,7 +177,7 @@ Thanks to [Seth F.][thelizardreborn] for fixes and [Krzysiek Goj][goj] for the  
 [jquery_site]: http://www.jquery.com
 [rik_site]: http://www.riklomas.co.uk
 [lomalogue_site]: http://www.lomalogue.com
-[issues]: http://github.com/deuxhuithuit/quicksearch/issues
-[thelizardreborn]: http://github.com/thelizardreborn
-[goj]: http://github.com/goj
+[issues]: https://github.com/deuxhuithuit/quicksearch/issues
+[thelizardreborn]: https://github.com/thelizardreborn
+[goj]: https://github.com/goj
 [288]: http://deuxhuithuit.com/
