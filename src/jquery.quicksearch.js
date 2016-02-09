@@ -18,6 +18,7 @@
 			noResults: '',
 			matchedResultsCount: 0,
 			bind: 'keyup search input',
+			resetBind: 'reset',
 			removeDiacritics: false,
 			minValLength: 0,
 			onBefore: $.noop,
