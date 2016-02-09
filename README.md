@@ -99,6 +99,8 @@ $.ajax({
 	Function to call after trigger is called
 *	**onValTooSmall**
 	Function to call when the value does not exceeds the `minValLength` option.
+*	**onNoResultFound**
+	Function to call when no results are found. The normal behavior (show the no result panel) is canceled when you specify this parameter. You get the quicksearch instance in parameter so you can manually call the no result behavior.
 *	**show**
 	Function that will add styles to matched elements
 *	**hide**
@@ -149,6 +151,7 @@ $('input#search').quicksearch('table tbody tr', {
 	}
 });
 ```
+
 ## Help make quicksearch better!
 
 If you have a bug fix, the best way to help would be to:
@@ -172,7 +175,7 @@ Now licensed under the MIT License: <http://deuxhuithuit.mit-license.org>
 jQuery quicksearch was made by [Rik Lomas][rik_site] at [Lomalogue][lomalogue_site].
 It is now maintain by [Deux Huit Huit][288]
 
-Thanks to [Seth F.][thelizardreborn] for fixes and [Krzysiek Goj][goj] for the  testQuery and prepareQuery option updates
+Thanks to [Seth F.][thelizardreborn] for fixes and [Krzysiek Goj][goj] for the testQuery and prepareQuery option updates
 
 [jquery_site]: http://www.jquery.com
 [rik_site]: http://www.riklomas.co.uk
