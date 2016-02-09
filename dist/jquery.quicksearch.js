@@ -1,5 +1,5 @@
 /*! jQuery-QuickSearch - v2.1.0 - 2016-02-09
-* http://deuxhuithuit.github.io/quicksearch/
+* https://deuxhuithuit.github.io/quicksearch/
 * Copyright (c) 2016 Deux Huit Huit (https://deuxhuithuit.com/);
 * Licensed MIT http://deuxhuithuit.mit-license.org */
 /*! jQuery-QuickSearch - v2.0.2 - 2013-11-15

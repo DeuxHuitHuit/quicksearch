@@ -7,14 +7,14 @@ This plugin is now maintained by [@DeuxHuitHuit][288]
 
 ## Project pages
 
-* <http://deuxhuithuit.github.io/quicksearch/>
+* <https://deuxhuithuit.github.io/quicksearch/>
 * <https://www.npmjs.org/package/jquery.quicksearch/>
 * <http://plugins.jquery.com/jquery.quicksearch/>
 
 ## Examples
 
-* <http://deuxhuithuit.github.io/quicksearch/r/examples/>
-* <http://deuxhuithuit.github.io/quicksearch/r/examples/super_table.html>
+* <https://deuxhuithuit.github.io/quicksearch/r/examples/>
+* <https://deuxhuithuit.github.io/quicksearch/r/examples/super_table.html>
 
 ## Usage
 
