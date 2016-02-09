@@ -88,12 +88,12 @@
 				*/
 
 				exampleFunction = function(){
-					alert("This function is called when there is no results and you set the 'OnNoResultsFound' function.");
+					alert("This function is called when there is no results and you set the 'onNoResultFound' function.");
 				}
 
 				$('input#id_noResultFunction').quicksearch(
 					'table#table_noResultFunction tbody tr',
-					{'onNoResultsFound': exampleFunction}
+					{'onNoResultFound': exampleFunction}
 				);				
 			});
 		</script>

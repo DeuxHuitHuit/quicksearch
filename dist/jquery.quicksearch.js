@@ -182,8 +182,8 @@
 			}
 			
 			if (noresults) {
-				if($.isFunction(options.onNoResultsFound)){
-					options.onNoResultsFound(this);
+				if($.isFunction(options.onNoResultFound)){
+					options.onNoResultFound(this);
 				}else{
 					this.results(false);
 				}
