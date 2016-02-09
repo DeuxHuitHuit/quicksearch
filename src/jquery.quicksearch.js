@@ -23,6 +23,7 @@
 			onBefore: $.noop,
 			onAfter: $.noop,
 			onValTooSmall: $.noop,
+			onNoResultFound: null,
 			show: function () {
 				$(this).show();
 			},
@@ -139,8 +140,7 @@
 			return str;
 		};
 		
-		var timeout, cache, rowcache, jq_results, val = '', last_val = '', 
-			self = this, 
+		var timeout, cache,	rowcache, jq_results, val = '', last_val = '', self = this, 
 			options = $.extend({}, $.quicksearch.defaults, opt);
 			
 		// Assure selectors
@@ -177,7 +177,12 @@
 			}
 			
 			if (noresults) {
-				this.results(false);
+				if($.isFunction(options.onNoResultsFound)){
+					options.onNoResultsFound(this);
+				}else{
+					this.results(false);
+				}
+				
 			} else {
 				this.results(true);
 				this.stripe();
