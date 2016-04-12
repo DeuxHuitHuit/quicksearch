@@ -35,3 +35,10 @@ form input { font-size: 16px;}
 .github a { background: #fff172; padding: 3px 10px;}
 
 #id_search {width: 300px;}
+
+.no-results-container {
+    background: #f34105;
+    color: #fff;
+    font-weight: bold;
+    padding: 1em;
+}

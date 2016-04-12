@@ -95,6 +95,10 @@
 					'table#table_noResultFunction tbody tr',
 					{'onNoResultFound': exampleFunction}
 				);				
+				
+				$("#noResultSearch").quicksearch("#noResultList li", {
+					noResults: "#noResultMessage"
+				});
 			});
 		</script>
 	</head>
@@ -861,6 +865,24 @@ $('input#id_noResultFunction').quicksearch(
 	'table#table_noResultFunction tbody tr',
 	{'onNoResultFound': exampleFunction}
 );		
+</pre></code>
+
+<h3>Show element when no results are found</h3>
+
+<input type="text" id="noResultSearch" name="search">
+  <ul id="noResultList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Lemon</li>
+  </ul>
+  <div id="noResultMessage" class="no-results-container">
+      No results have been found.
+  </div>
+  <p>This example uses the following code:</p>
+  <code><pre>
+$("#noResultSearch").quicksearch("#noResultList li", {
+  noResults: "#noResultMessage"
+});
 </pre></code>
 
 <p><a href="super_table.html">Super table example</a></p>
