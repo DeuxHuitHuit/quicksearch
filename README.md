@@ -83,6 +83,8 @@ $.ajax({
 	An array of class names to go on each row
 *	**loader**
 	A query selector to find a loading element
+*	**caseSensitive**
+	Maintain original case of searchable content when comparing to query, instead of converting to lowercase. Defaults to false.
 *	**noResults**
 	A query selector to show if there's no results for the search
 *	**bind**

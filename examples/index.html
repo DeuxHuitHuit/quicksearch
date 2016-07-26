@@ -99,6 +99,16 @@
 				$("#noResultSearch").quicksearch("#noResultList li", {
 					noResults: "#noResultMessage"
 				});
+
+				/*
+				Example 5
+				*/
+				$("#caseSensitiveSearch").quicksearch("#caseSensitiveList li", {
+				  caseSensitive: true,
+				  prepareQuery: function(val) {
+				  	return val;
+				  }
+				});
 			});
 		</script>
 	</head>
@@ -882,6 +892,27 @@ $('input#id_noResultFunction').quicksearch(
   <code><pre>
 $("#noResultSearch").quicksearch("#noResultList li", {
   noResults: "#noResultMessage"
+});
+</pre></code>
+
+<h3>Case-sensitive search</h3>
+
+<input type="text" id="caseSensitiveSearch" name="search">
+  <ul id="caseSensitiveList">
+    <li>Apple</li>
+    <li>apple</li>
+    <li>Banana</li>
+    <li>banana</li>
+    <li>Lemon</li>
+    <li>lemon</li>
+  </ul>
+  <p>This example uses the following code:</p>
+  <code><pre>
+$("#caseSensitiveSearch").quicksearch("#caseSensitiveList li", {
+  caseSensitive: true,
+  prepareQuery: function(val) {
+  	return val;
+  }
 });
 </pre></code>
 
