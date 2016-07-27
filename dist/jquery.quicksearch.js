@@ -1,4 +1,4 @@
-/*! jQuery-QuickSearch - v2.2.0 - 2016-02-09
+/*! jQuery-QuickSearch - v2.3.0 - 2016-07-27
 * https://deuxhuithuit.github.io/quicksearch/
 * Copyright (c) 2016 Deux Huit Huit (https://deuxhuithuit.com/);
 * Licensed MIT http://deuxhuithuit.mit-license.org */
@@ -19,6 +19,7 @@
 			selector: null,
 			stripeRows: null,
 			loader: null,
+			caseSensitive: false,
 			noResults: '',
 			matchedResultsCount: 0,
 			bind: 'keyup search input',
@@ -245,7 +246,10 @@
 		
 		this.strip_html = function (input) {
 			var output = input.replace(new RegExp('<[^<]+\\>', 'g'), ' ');
-			output = $.trim(output.toLowerCase());
+			if (!options.caseSensitive) {
+				output = output.toLowerCase();
+			}
+			output = $.trim(output);
 			return output;
 		};
 		
@@ -319,7 +323,6 @@
 		};
 		
 		this.cache();
-		this.results(true);
 		this.stripe();
 		this.loader(false);
 		
