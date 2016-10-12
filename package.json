@@ -4,22 +4,12 @@
   "description": "A jQuery plugin for searching through tables, lists, etc quickly",
   "version": "2.3.0",
   "homepage": "https://deuxhuithuit.github.io/quicksearch/",
-  "author": [
-    {
-      "name": "Deux Huit Huit",
-      "url": "https://deuxhuithuit.com/"
-    },
-    {
-      "name": "Rik Lomas",
-      "url": "http://www.riklomas.co.uk/"
-    }
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://deuxhuithuit.mit-license.org/"
-    }
-  ],
+  "author": {
+    "name": "Deux Huit Huit",
+    "url": "https://deuxhuithuit.com/"
+  },
+  "contributors": ["deuxhuithuit", "nitriques"],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/DeuxHuitHuit/quicksearch.git"
