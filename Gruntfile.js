@@ -19,12 +19,12 @@ module.exports = function(grunt) {
 			'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
 			'* Copyright (c) 2013 Deux Huit Huit, Rik Lomas.\n' +
 			'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> (<%= pkg.author.url %>);\n' +
-			'* License <%= pkg.license %> http://deuxhuithuit.mit-license.org */\n'
+			'* License <%= pkg.license %> http://deuxhuithuit.mit-license.org */'
 		},
 		concat: {
 			options: {
 				process: true,
-				banner: '<%= meta.banner %>'
+				banner: '<%= meta.banner %>\n'
 			},
 			dist: {
 				src: sources,
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 					//jsLintXML: 'report.xml', // create XML JSLint-like report
 					errorsOnly: false, // show only maintainability errors
 					cyclomatic: 10, // 3
-					halstead: 20, // 8
+					halstead: 22, // 8
 					maintainability: 95 //100
 				}
 			}
