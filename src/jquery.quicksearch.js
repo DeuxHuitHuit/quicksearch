@@ -6,7 +6,7 @@
  * Licensed MIT: http://deuxhuithuit.mit-license.org
  */
 
-(function($, window, document, undefined) {
+(function ($, global, undefined) {
 	'use strict';
 	
 	$.quicksearch = {
@@ -212,8 +212,8 @@
 			val = '';
 			this.loader(true);
 			options.onBefore.call(this);
-			window.clearTimeout(timeout);
-			timeout = window.setTimeout(function () {
+			global.clearTimeout(timeout);
+			timeout = global.setTimeout(function () {
 				self.go();
 			}, options.delay);
 		};
@@ -309,8 +309,8 @@
 			} else {
 				this.loader(true);
 				options.onBefore.call(this);
-				window.clearTimeout(timeout);
-				timeout = window.setTimeout(function () {
+				global.clearTimeout(timeout);
+				timeout = global.setTimeout(function () {
 					self.go();
 				}, options.delay);
 			}
@@ -332,7 +332,11 @@
 				self.reset();
 			});
 		});
-		
 	};
-
-}(window.jQuery, this, document));
+	
+	// node export
+	if (global.module && global.module.exports) {
+		module.exports = $.fn.quicksearch;
+	}
+	
+}(jQuery, window || global));
