@@ -339,4 +339,4 @@
 		module.exports = $.fn.quicksearch;
 	}
 	
-}(jQuery, window || global));
+})(jQuery, this);
