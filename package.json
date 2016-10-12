@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/DeuxHuitHuit/quicksearch/issues"
   },
-  "main": "dist/jquery.quicksearch.js",
+  "main": "dist/jquery.quicksearch.min.js",
   "scripts": {
     "build": "npm i && grunt"
   },
