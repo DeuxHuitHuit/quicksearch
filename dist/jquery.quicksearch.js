@@ -1,7 +1,7 @@
-/*! jQuery-QuickSearch - v2.3.1 - 2016-10-12
+/*! jQuery-QuickSearch - v2.3.2 - 2017-03-21
 * https://deuxhuithuit.github.io/quicksearch/
 * Copyright (c) 2013 Deux Huit Huit, Rik Lomas.
-* Copyright (c) 2016 Deux Huit Huit (https://deuxhuithuit.com/);
+* Copyright (c) 2017 Deux Huit Huit (https://deuxhuithuit.com/);
 * License MIT http://deuxhuithuit.mit-license.org */
 (function ($, global, undefined) {
 	'use strict';
@@ -336,4 +336,4 @@
 		module.exports = $.fn.quicksearch;
 	}
 	
-})(jQuery, this);
+})(jQuery, window || global);
