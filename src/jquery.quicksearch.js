@@ -10,6 +10,7 @@
 			caseSensitive: false,
 			noResults: '',
 			matchedResultsCount: 0,
+			keyCode : false,
 			bind: 'keyup search input',
 			resetBind: 'reset',
 			removeDiacritics: false,
@@ -315,10 +316,19 @@
 		this.loader(false);
 		
 		return this.each(function () {
-			$(this).on(options.bind, function () {
-				val = $(this).val();
-				self.trigger();
+			$(this).on(options.bind, function (e) {
+				if (options.keyCode) {
+					var keycode = e.keyCode || e.which;
+					if (keycode === options.keyCode) {
+						val = $(this).val();
+						self.trigger();
+					}
+				} else {
+					val = $(this).val();
+					self.trigger();
+				}
 			});
+			
 			$(this).on(options.resetBind, function () {
 				val = '';
 				self.reset();
